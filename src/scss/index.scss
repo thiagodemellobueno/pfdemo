@@ -1,0 +1,36 @@
+@use "./abstracts/_reset.scss";
+@use "./tokens/_typography.scss";
+
+// @import url(https://publichealth.jhu.edu/sites/default/files/css/css_64oehfBPjX8HzK_goN9y31ReD96TX57UaSgWo2XcspA.css?delta=1&language=en&theme=jhsph&include=eJxtjtFqgzEIRl8o_Nlg7FV2KeaPTWxNDJrA-vYLbKUUduXx-KGiO03gfqVzqsXT_Zgm8P7x9gmVMAt3cijGGTL7ELwDuy-Ci9rWugagTT6FPNCCU_XGtEsbwthPiv9JSGgU6Hvu7beYbQ2U468NRbXITjvFX9z0hZOsob1Muz71tfqosYgmlNAoM0alligf-8-Gc-fCQMNiOKo_Tj7NsfpYSdgr5eBrkF02R-48g999UosJnX4AfPR20Q);
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.slide-deck {
+  background-color: #fafafa;
+  position: relative;
+  left: 0;
+  transition-property: left;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  width: 1000vw;
+  display: flex;
+  height: 100vh;
+
+  .slide {
+    position: relative;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+
+    &.accent-bg {
+      background: radial-gradient(75.74% 69.58% at 50% 15.04%, #7D10DE 0%, #330059 100%);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin drawer {
+    width: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition-property: "width, max-height, opacity";
+    transition-timing-function: ease-in-out;
+    transition-duration: 200ms;
+
+    &.revealed {
+        &.revealed {
+            width: 100%;
+            max-height: 400px;
+            opacity: 1; 
+            overflow: visible;
+        }        
+    }
+}
+

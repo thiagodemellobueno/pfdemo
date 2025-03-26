@@ -1,0 +1,38 @@
+@use "sass:list";
+@use "../../scss/abstracts/drawer.scss";
+@use "../../scss/tokens/colors.scss" as c;
+@use "../../scss/abstracts/transition.scss" as _t;
+
+.program {
+    position: relative;
+    visibility: hidden;
+    display: none;
+    .inner-wrapper {
+        @include _t.tz(all, 00ms); 
+        position: relative;
+        top: 3rem;
+        left: 0;
+        background-color: #efefef;
+        padding: 1rem;
+        opacity: 0;
+    }
+}
+
+.program.match {
+    display: flex;
+    .inner-wrapper {
+        top: 3rem;
+        opacity: 0;
+        left: 0;
+    }
+}
+
+.program.match.reveal {
+    display: flex;
+    visibility: visible;
+    .inner-wrapper {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}

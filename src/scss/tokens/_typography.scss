@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+h1, h2, h3, h4, h5 {
+    font-weight: 800;
+}
+
+body { 
+    font-family: "Source Sans Pro", sans-serif;
+}

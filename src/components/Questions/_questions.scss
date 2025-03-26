@@ -1,0 +1,72 @@
+@use "../../scss/abstracts/transition.scss" as _t;
+
+.questions {
+    border: 2rem #fafafa solid;
+}
+
+.results-count-display {
+    display :flex;
+    justify-content:flex-start;
+    background-color: #feffbd;
+    padding: 0.5rem 2rem;
+
+    p {
+        margin-right: 2rem;
+    }
+}
+
+.hidden { 
+    display: none;
+}
+
+.result-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+    @include _t.tz(max-height, 1.2s);
+ 
+    &.hidden {
+        max-height: 0;
+        overflow: hidden;    
+    }
+
+    &.visible {
+        max-height: 3000px;
+        overflow: visible;
+    }
+    
+    .program {
+        position: relative;
+        visibility: hidden;
+        display: none;
+        .inner-wrapper {
+            @include _t.tz(all, 500ms); 
+            position: relative;
+            top: 3rem;
+            left: 0;
+            background-color: #efefef;
+            padding: 1rem;
+            opacity: 0;
+        }
+    }
+
+    .program.match {
+        display: flex;
+        .inner-wrapper {
+            top: 3rem;
+            opacity: 0;
+            left: 0;
+        }
+    }
+
+    .program.match.reveal {
+        display: flex;
+        visibility: visible;
+        .inner-wrapper {
+            top: 0;
+            left: 0;
+            opacity: 1;
+        }
+    }
+}

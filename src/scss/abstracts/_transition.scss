@@ -1,0 +1,6 @@
+@mixin tz ($properties: all, $duration: 200ms, $ttf: ease-out, $delay: 0) {
+    transition-property: $properties;
+    transition-duration: $duration;
+    transition-timing-function: $ttf;
+    transition-delay: $delay;
+}

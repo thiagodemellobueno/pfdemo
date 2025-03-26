@@ -1,0 +1,14 @@
+$colors: (
+  "accent-primary": #0af,
+  "text-primary": #222,
+  "text-secondary": #777,
+  "headings": #0af,
+  "accent-secondary": #444,
+  "ui-border": #dedede,
+  "bg-primary": #fff,
+  "bg-secondary": #eee,
+);
+
+@function c($key) {
+  @return map-get($colors, $key);
+}
